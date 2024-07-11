@@ -16,8 +16,7 @@
 }
 
 html {
-    /* trick */
-    font-size: 62.5%;
+    font-size: 62.5%;  /* Base size for easy rem calculation */
 }
 
 body {
