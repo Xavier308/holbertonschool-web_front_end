@@ -42,7 +42,8 @@
 }
 
 html {
-    font-size: 62.5%;  /* Base size for easy rem calculation */
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {

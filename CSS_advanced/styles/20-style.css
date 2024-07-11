@@ -44,7 +44,8 @@
 }
 
 html {
-    font-size: 62.5%;  /* Makes 1rem = 10px */
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
