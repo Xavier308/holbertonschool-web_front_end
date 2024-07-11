@@ -257,8 +257,9 @@ ul.row {
     color: var(--button-hover-color);
     background-color: var(--button-hover-background);
     text-decoration: var(--button-hover-text-decoration);
-    transition: color var(--transition-duration) var(--transition-cubic-bezier), 
+    transition: color var(--transition-duration) var(--transition-cubic-bezier),
                 background-color var(--transition-duration) var(--transition-cubic-bezier);
+    transition-duration: var(--transition-duration);
 }
 
 [data-section-theme="dark"] {
