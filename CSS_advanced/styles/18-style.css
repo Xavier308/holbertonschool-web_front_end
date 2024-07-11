@@ -4,10 +4,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap');
 
-/* Universal box-sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
 /* font properties, colors, and line heights in root */
 :root {
@@ -46,6 +42,11 @@
     --nav-item-display: inline-block;
     --nav-item-margin: calc(var(--font-size-medium) * 3) 0 0 0;
     --nav-item-link-hover: var(--color-primary);
+}
+
+/* Universal box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 html {
