@@ -292,11 +292,12 @@ ul.row {
     overflow: hidden;
 }
 
-.card-work .card-image img {
+/* Apply transition property to the non-hover state */
+.card-work .card-image {
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);  /* Ensures transition is ready before hover */
 }
 
 .card-work .card-inner {
@@ -305,17 +306,23 @@ ul.row {
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-    transition: all var(--transition-duration) var(--transition-cubic-bezier);
+    transition: all var(--transition-duration) var(--transition-cubic-bezier); /* Applies to all changes during hover */
+}
+
+/* Define hover state changes */
+.card-work:hover .card-image {
+    transform: scale(1.2);  /* Only specify the transformation on hover */
 }
 
 .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Only specify background change on hover */
 }
 
+/* Keep the existing styles for other elements as they are */
 .card-work .card-title {
     text-align: center;
     margin: 0;
-    opacity: 0;
+    opacity: 0; /* Initial opacity for transition effect on hover */
     height: 100%;
     position: relative;
 }
@@ -338,18 +345,7 @@ ul.row {
 }
 
 .card-work:hover .card-title {
-    opacity: 1;
-}
-
-/* Transformations on the card work */
-.card-work:hover .card-image {
-    transform: scale(1.2);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work:hover .card-outer {
-    transform: scale(0.95);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+    opacity: 1; /* Transition to full opacity on hover */
 }
 
 /* card-testimonial */
