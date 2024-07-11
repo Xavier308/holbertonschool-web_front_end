@@ -260,6 +260,7 @@ ul.row {
     transition: color var(--transition-duration) var(--transition-cubic-bezier),
                 background-color var(--transition-duration) var(--transition-cubic-bezier);
     transition-duration: var(--transition-duration);
+    transition-property: background-color;
 }
 
 [data-section-theme="dark"] {
