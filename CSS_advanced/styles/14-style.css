@@ -31,7 +31,8 @@
 }
 
 html {
-    font-size: 62.5%;  /* Base size for easy rem calculation */
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
@@ -47,39 +48,33 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
+a:link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:visited {
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--color-light-grey);
+}
+
 .visually-hidden {
     display: none;
 }
 
-.card-category, .section-tagline {
+.card-category {
     color: var(--color-primary);
-}
-
-a[href] {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-a[href]:visited {
-    font-style: italic;
-}
-
-a[href]:hover {
-    text-decoration: underline;
-}
-
-a[href]:active {
-    background-color: var(--color-light-grey);
 }
 
 .section-header {
     text-align: var(--section-header-align);
-}
-
-.section-tagline {
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
 }
 
 .section-title {
@@ -88,4 +83,11 @@ a[href]:active {
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
     color: var(--section-title-color);
+}
+
+.section-tagline {
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
 }
