@@ -4,11 +4,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap');
 
-/* Universal box-sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 /* font properties, colors, and line heights in root */
 :root {
     --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -33,6 +28,13 @@
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+    /* navbar */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -40,7 +42,13 @@
     --nav-item-display: inline-block;
     --nav-item-margin: calc(var(--font-size-medium) * 3) 0 0 0;
     --nav-item-link-hover: var(--color-primary);
+
     --section-tagline-margin: 0;
+}
+
+/* Universal box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 html {
@@ -50,10 +58,10 @@ html {
 
 body {
     font-family: var(--font-family-base);
-    color: var(--text-color);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
+    color: var(--text-color);
 }
 
 /* Customizing navbar */
