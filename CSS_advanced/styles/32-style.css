@@ -209,6 +209,7 @@ a:active {
     background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
+    transition: all var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .nav .nav-item:hover .nav-link::before {
@@ -256,6 +257,8 @@ ul.row {
     color: var(--button-hover-color);
     background-color: var(--button-hover-background);
     text-decoration: var(--button-hover-text-decoration);
+    transition: color var(--transition-duration) var(--transition-cubic-bezier), 
+                background-color var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 [data-section-theme="dark"] {
@@ -292,7 +295,7 @@ ul.row {
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    vertical-align: bottom;
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work .card-inner {
@@ -301,6 +304,7 @@ ul.row {
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
+    transition: all var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-inner {
@@ -336,6 +340,16 @@ ul.row {
     opacity: 1;
 }
 
+/* Transformations on the card work */
+.card-work:hover .card-image {
+    transform: scale(1.2);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+}
 
 /* card-testimonial */
 .card-testimonial {
@@ -403,36 +417,4 @@ ul.row {
     margin: 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
-}
-
-/* Transformations and animations */
-
-.card-work:hover .card-image {
-    transform: scale(1.2);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work:hover .card-outer {
-    transform: scale(0.95);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-/* Animations on the navigation items */
-.nav .nav-link::before {
-    transition: all var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-/* Animate the button background */
-.button:hover {
-    transition: color var(--transition-duration) var(--transition-cubic-bezier), 
-                background-color var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-/* Add transitions on the card works */
-.card-work .card-image {
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work .card-inner {
-    transition: all var(--transition-duration) var(--transition-cubic-bezier);
 }
