@@ -8,6 +8,11 @@
     --text-color: var(--color-black);
 }
 
+/* Smooth scrolling to the entire document */
+html {
+    scroll-behavior: smooth;
+}
+
 body, a {
     color: var(--text-color);
 }
