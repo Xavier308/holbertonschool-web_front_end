@@ -345,7 +345,12 @@ ul.row {
 }
 
 .card-work:hover .card-title {
-    opacity: 1; /* Transition to full opacity on hover */
+    opacity: 1;
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 /* card-testimonial */
