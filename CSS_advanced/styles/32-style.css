@@ -287,24 +287,29 @@ ul.row {
 }
 
 /* card-work */
-.card-work .card-outer {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Apply transition property to the non-hover state */
 .card-work .card-image {
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    transition-property: transform;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-cubic-bezier);
+    vertical-align: bottom;
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-image {
     transform: scale(1.2);
 }
+
+
+.card-work .card-outer {
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+}
+
 
 .card-work .card-inner {
     position: absolute;
@@ -316,7 +321,7 @@ ul.row {
 }
 
 .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Background change on hover */
 }
 
 .card-work .card-title {
