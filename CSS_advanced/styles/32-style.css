@@ -297,7 +297,11 @@ ul.row {
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);  /* Ensures transition is ready before hover */
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-image {
+    transform: scale(1.2);
 }
 
 .card-work .card-inner {
@@ -309,20 +313,14 @@ ul.row {
     transition: all var(--transition-duration) var(--transition-cubic-bezier); /* Applies to all changes during hover */
 }
 
-/* Define hover state changes */
-.card-work:hover .card-image {
-    transform: scale(1.2);  /* Only specify the transformation on hover */
-}
-
 .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7); /* Only specify background change on hover */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Keep the existing styles for other elements as they are */
 .card-work .card-title {
     text-align: center;
     margin: 0;
-    opacity: 0; /* Initial opacity for transition effect on hover */
+    opacity: 0;
     height: 100%;
     position: relative;
 }
