@@ -296,10 +296,11 @@ ul.row {
 }
 
 .card-work:hover .card-image {
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-cubic-bezier);
     transform: scale(1.2);
 }
-
 
 .card-work .card-outer {
     position: relative;
@@ -354,10 +355,6 @@ ul.row {
     opacity: 1;
 }
 
-.card-work:hover .card-outer {
-    transform: scale(0.95);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
 
 /* card-testimonial */
 .card-testimonial {
